@@ -64,12 +64,12 @@ export const fetchDataByGenre = createAsyncThunk("netflix/moviesByGenres",async(
 // return getRawData(`${TMBD_BASE_URL}/discover/${type}?api_key=${API_KEY}&with_genres=${genre}`)
 
 export const getUserLikedMovies = createAsyncThunk("netflix/getliked",async(email)=>{
-    const {data:{movies},}=await axios.get(`http://localhost:5000/api/user/liked/${email}`);
+    const {data:{movies},}=await axios.get(`https://netflix-clone-api-vtzj.onrender.com/api/user/liked/${email}`);
     return movies;
 })
 
 export const removeFromLikedMovies = createAsyncThunk("netflix/deleteLiked",async({email,movieId})=>{
-    const {data:{movies},}=await axios.put(`http://localhost:5000/api/user/delete`,{email,movieId});
+    const {data:{movies},}=await axios.put(`https://netflix-clone-api-vtzj.onrender.com/api/user/delete`,{email,movieId});
     return movies;
 })
 

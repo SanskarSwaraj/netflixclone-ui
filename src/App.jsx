@@ -17,7 +17,7 @@ export default function App() {
         <Route exact path="/player" element={<Player />} />
         <Route exact path="/movies" element={<Movies />} />
         <Route exact path="/tv" element={<TVShows />} />
-        <Route exact path="https://netflix-clone-3bdf.onrender.com/mylist" element={<UserLiked />} />
+        <Route exact path="/mylist" element={<UserLiked />} />
         <Route exact path="/" element={<Netflix />}/>
       </Routes>
     </BrowserRouter>
